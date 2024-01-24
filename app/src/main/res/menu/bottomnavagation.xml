@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+
+
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/img_5"
+        android:checkable="true"
+        android:iconTint="@color/white"/>
+
+
+    <item
+        android:id="@+id/bottomC"
+        android:title="contact"
+        android:icon="@drawable/img_2"
+        android:checkable="true"
+
+        />
+
+
+
+
+
+    <item
+        android:id="@+id/bottomS"
+        android:title="notificion"
+        android:icon="@drawable/img_4"
+        android:checkable="true"
+
+        />
+
+</menu>
