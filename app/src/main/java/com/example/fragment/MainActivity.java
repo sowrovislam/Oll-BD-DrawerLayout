@@ -54,8 +54,10 @@ public class MainActivity extends AppCompatActivity {
         FragmentManager fragmentManager=getSupportFragmentManager();
         FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
         fragmentTransaction.add(R.id.frameLayout,new BlankFragment());
-        fragmentTransaction.commit();
 
+
+
+        fragmentTransaction.commit();
 
 
 
@@ -69,9 +71,32 @@ public class MainActivity extends AppCompatActivity {
                if (item.getItemId()==R.id.exit){
 
 
-                   onBackPressed();
+
+                   new AlertDialog.Builder(MainActivity.this)
+
+                           .setTitle("Do You Realy !! Exit")
+                           .setMessage("tnx you sire")
+                           .setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                               @Override
+                               public void onClick(DialogInterface dialog, int which) {
 
 
+                                   dialog.dismiss();
+
+                               }
+                           })
+
+                           .setPositiveButton(" Exit", new DialogInterface.OnClickListener() {
+                               @Override
+                               public void onClick(DialogInterface dialog, int which) {
+                                   finish();
+                                   dialog.dismiss();
+
+                               }
+                           })
+
+
+                           .show();
 
                    Toast.makeText(MainActivity.this, "Exit ", Toast.LENGTH_SHORT).show();
 
@@ -92,12 +117,11 @@ public class MainActivity extends AppCompatActivity {
 
                if (item.getItemId()==R.id.home){
 
+
                    FragmentManager fragmentManager=getSupportFragmentManager();
                    FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
                    fragmentTransaction.add(R.id.frameLayout,new BlankFragment());
                    fragmentTransaction.commit();
-
-
 
 
                    Toast.makeText(MainActivity.this, "HOME ", Toast.LENGTH_SHORT).show();
@@ -168,40 +192,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        @Override
-        public void onBackPressed() {
 
-
-
-
-            new AlertDialog.Builder(MainActivity.this)
-
-                    .setTitle("Do You Realy !! Exit")
-                    .setMessage("tnx you sire")
-                    .setNegativeButton("NO", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-
-
-                            dialog.dismiss();
-
-                        }
-                    })
-
-                    .setPositiveButton(" Exit", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            finish();
-                            dialog.dismiss();
-
-                        }
-                    })
-
-
-                    .show();
-
-
-
-        }
 
     }

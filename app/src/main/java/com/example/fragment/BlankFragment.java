@@ -2,7 +2,10 @@ package com.example.fragment;
 
 import android.os.Bundle;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -58,7 +61,75 @@ public class BlankFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_blank, container, false);
+
+        View myView=inflater.inflate(R.layout.fragment_blank, container, false);
+
+        CardView cardView, bmicard;
+
+
+          cardView =myView.findViewById(R.id.count1);
+
+        bmicard =myView.findViewById(R.id.bmicard);
+
+
+        cardView.setOnClickListener(new View.OnClickListener() {
+              @Override
+              public void onClick(View v) {
+
+
+
+              FragmentManager fragmentManager=getActivity().getSupportFragmentManager();
+                  FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+                  fragmentTransaction.add(R.id.frameLayout,new BlankFragment2());
+                  fragmentTransaction.addToBackStack("ii");
+                  fragmentTransaction.commit();
+
+
+
+
+
+              }
+          });
+
+
+
+
+        bmicard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+
+                FragmentManager fragmentManager=getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+                fragmentTransaction.add(R.id.frameLayout,new BlankFragment3());
+                fragmentTransaction.addToBackStack("ii");
+                fragmentTransaction.commit();
+
+
+
+
+
+            }
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        return myView;
     }
+
+
 }
