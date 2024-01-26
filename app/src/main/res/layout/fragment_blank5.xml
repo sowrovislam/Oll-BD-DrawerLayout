@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#FFC107"
+    android:clickable="true"
+    tools:context=".BlankFragment5">
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:layout_marginStart="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="34dp"
+        android:hint="Input Tex"
+        app:hintTextColor="@color/black"
+        app:endIconMode="clear_text"
+        app:startIconDrawable="@drawable/wight"
+        app:counterEnabled="true"
+        app:counterMaxLength="500"
+        app:helperText="Required"
+
+        >
+
+
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/specked"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="500"
+            android:textStyle="italic"
+            android:textColor="@color/black"
+            />
+
+
+
+
+
+
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+<androidx.appcompat.widget.AppCompatButton
+    android:id="@+id/speckbutton"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="70dp"
+    android:layout_marginEnd="70dp"
+    android:layout_marginTop="100dp"
+    android:background="@drawable/cardviewbacround"
+    android:text="Click hare"
+    android:textColor="@color/black"/>
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>

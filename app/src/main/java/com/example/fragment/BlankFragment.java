@@ -64,13 +64,15 @@ public class BlankFragment extends Fragment {
 
         View myView=inflater.inflate(R.layout.fragment_blank, container, false);
 
-        CardView cardView, bmicard;
+        CardView cardView, bmicard,bill,cardTex,savedata;
 
 
-          cardView =myView.findViewById(R.id.count1);
+        cardView =myView.findViewById(R.id.count1);
+        bill =myView.findViewById(R.id.bill);
+        cardTex =myView.findViewById(R.id.cardTex);
 
         bmicard =myView.findViewById(R.id.bmicard);
-
+        savedata =myView.findViewById(R.id.savedata);
 
         cardView.setOnClickListener(new View.OnClickListener() {
               @Override
@@ -78,7 +80,7 @@ public class BlankFragment extends Fragment {
 
 
 
-              FragmentManager fragmentManager=getActivity().getSupportFragmentManager();
+                  FragmentManager fragmentManager=getActivity().getSupportFragmentManager();
                   FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
                   fragmentTransaction.add(R.id.frameLayout,new BlankFragment2());
                   fragmentTransaction.addToBackStack("ii");
@@ -118,8 +120,67 @@ public class BlankFragment extends Fragment {
 
 
 
+        bill.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
 
+
+                FragmentManager fragmentManager=getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+                fragmentTransaction.add(R.id.frameLayout,new BlankFragment4());
+                fragmentTransaction.addToBackStack("ii");
+                fragmentTransaction.commit();
+
+
+
+
+
+            }
+        });
+
+
+
+
+        cardTex.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+
+                FragmentManager fragmentManager=getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+                fragmentTransaction.add(R.id.frameLayout,new BlankFragment5());
+                fragmentTransaction.addToBackStack("ii");
+                fragmentTransaction.commit();
+
+
+
+
+
+            }
+        });
+
+
+
+        savedata.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+
+                FragmentManager fragmentManager=getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+                fragmentTransaction.add(R.id.frameLayout,new BlankFragment6());
+                fragmentTransaction.addToBackStack("ii");
+                fragmentTransaction.commit();
+
+
+
+
+
+            }
+        });
 
 
 
